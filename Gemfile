@@ -15,6 +15,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jquery-rails"
 gem "bootstrap-sass"
+gem "ffaker"
 gem "breadcrumbs_on_rails"
 
 group :development, :test do
