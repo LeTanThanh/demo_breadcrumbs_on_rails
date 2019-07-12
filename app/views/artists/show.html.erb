@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Artist <%= @artist.name %></h2>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Name: <%= @artist.name %>
+    </div>
+    <div class="panel-body">
+      <%= @artist.description %>
+
+      <p style="margin: 10px 0;"><%= link_to "View all albums", "#" %></p>
+    </div>
+  </div>
+</div>
