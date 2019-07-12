@@ -11,7 +11,9 @@
 
   <body>
     <div class="container">
-      <%= render_breadcrumbs %>
+      <ol class="breadcrumb">
+        <%= render_breadcrumbs tag: "li class='breadcrumb-item'", separator: "" %>
+      </ol>
     </div>
     <%= yield %>
   </body>
