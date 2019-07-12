@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Song <%= @song.name %></h2>
+  <p>by artist <%= link_to @artist.name, @artist %> in album <%= link_to @album.name, @album %></p>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Name: <%= @song.name %>
+    </div>
+    <div class="panel-body">
+      <%= @song.description %>
+
+      <div>
+        Lyric:
+        <ul>
+          <% @song.lyric.split("<br>").each do |line| %>
+            <li><%= line %></li>
+          <% end %>
+        </ul>
+      <div>
+    </div>
+  </div>
+</div>

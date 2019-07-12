@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
-  before_action :load_artist, only: %i(index)
-  before_action :load_album, only: %i(show)
+  before_action :load_artist, only: :index
+  before_action :load_album, only: :show
 
   def index
     @albums = @artist.albums

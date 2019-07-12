@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   resources :artists, only: :show
   resources :albums, only: %i(index show)
-  resources :songs, only: :index
+  resources :songs, only: %i(index show)
 end
