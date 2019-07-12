@@ -6,6 +6,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    add_breadcrumb "Artist #{@artist.name}", :artist_path
   end
 
   private

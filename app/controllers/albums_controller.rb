@@ -4,10 +4,17 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = @artist.albums
+    
+    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
+    add_breadcrumb "Albums", "/albums?artist_id=#{@artist.id}"
   end
 
   def show
     @artist = @album.artist
+  
+    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
+    add_breadcrumb "Albums", "/albums?artist_id=#{@artist.id}"
+    add_breadcrumb "Album #{@album.name}", :album_path
   end
 
   private
@@ -20,7 +27,6 @@ class AlbumsController < ApplicationController
 
   def load_album
     @album = Album.find_by id: params[:id]
-
     redirect_back(fallback_location: root_url) unless @album
   end
 end

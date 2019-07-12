@@ -5,11 +5,22 @@ class SongsController < ApplicationController
   def index
     @songs = @album.songs
     @artist = @album.artist
+
+    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
+    add_breadcrumb "Albums", "/albums?artist_id=#{@artist.id}"
+    add_breadcrumb "Album #{@album.name}", "/albums/#{@album.id}"
+    add_breadcrumb "Songs", "/songs?album_id=#{@album.id}"
   end
 
   def show
     @album = @song.album
     @artist = @album.artist
+
+    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
+    add_breadcrumb "Albums", "/albums?artist_id=#{@artist.id}"
+    add_breadcrumb "Album #{@album.name}", "/albums/#{@album.id}"
+    add_breadcrumb "Songs", "/songs?album_id=#{@album.id}"
+    add_breadcrumb "Song #{@song.name}", :song_path
   end
 
   private
