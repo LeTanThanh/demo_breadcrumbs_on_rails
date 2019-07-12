@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Album <%= @album.name %></h2>
+  <p>by artist <%= link_to @artist.name, @artist %></p>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Name: <%= @album.name %>
+    </div>
+    <div class="panel-body">
+      <%= @album.description %>
+
+      <p style="margin: 10px 0;">
+        <%= link_to "View all songs", "#" %>
+      </p>
+    </div>
+  </div>
+</div>

@@ -12,12 +12,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @albums.each do |albums| %>
+      <% @albums.each do |album| %>
         <tr>
-          <td><%= albums.id %></td>
-          <td><%= albums.name %></td>
-          <td><%= albums.description %></td>
-          <td><%= link_to "View", "#", class: "btn btn-sm btn-primary" %></td>
+          <td><%= album.id %></td>
+          <td><%= album.name %></td>
+          <td><%= album.description %></td>
+          <td><%= link_to "View", album, class: "btn btn-sm btn-primary" %></td>
         </tr>
       <% end %>
     </tbody>
