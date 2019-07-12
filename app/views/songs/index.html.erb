@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Songs</h2>
+  <p>by artist <%= link_to @artist.name, @artist %> in album <%= link_to @album.name, @album %></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.id %></td>
+          <td><%= song.name %></td>
+          <td><%= song.description %></td>
+          <td><%= link_to "View", "#", class: "btn btn-sm btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

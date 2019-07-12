@@ -10,7 +10,7 @@
       <%= @album.description %>
 
       <p style="margin: 10px 0;">
-        <%= link_to "View all songs", "#" %>
+        <%= link_to "View all songs", songs_path(album_id: @album.id) %>
       </p>
     </div>
   </div>
