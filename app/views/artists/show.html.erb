@@ -8,7 +8,9 @@
     <div class="panel-body">
       <%= @artist.description %>
 
-      <p style="margin: 10px 0;"><%= link_to "View all albums", "#" %></p>
+      <p style="margin: 10px 0;">
+        <%= link_to "View all albums", albums_path(artist_id: @artist.id) %>
+      </p>
     </div>
   </div>
 </div>
