@@ -16,8 +16,4 @@ class ArtistsController < ApplicationController
 
     redirect_to root_url unless @artist
   end
-
-  def add_breadcrumb_artist_path
-    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
-  end
 end

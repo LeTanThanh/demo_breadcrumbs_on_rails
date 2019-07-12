@@ -27,16 +27,4 @@ class AlbumsController < ApplicationController
 
     @artist = @album.artist
   end
-
-  def add_breadcrumb_artist_path
-    add_breadcrumb "Artist #{@artist.name}", "/artists/#{@artist.id}"
-  end
-
-  def add_breadcrumb_albums_path
-    add_breadcrumb "Albums", "/albums?artist_id=#{@artist.id}"
-  end
-
-  def add_breadcrumb_album_path
-    add_breadcrumb "Album #{@album.name}", :album_path
-  end
 end
