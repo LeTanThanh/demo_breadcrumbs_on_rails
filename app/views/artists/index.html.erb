@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Artists</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @artists.each do |artist| %>
+        <tr>
+          <td><%= artist.id %></td>
+          <td><%= artist.name %></td>
+          <td><%= artist.description %></td>
+          <td><%= link_to "View", "#", class: "btn btn-sm btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
